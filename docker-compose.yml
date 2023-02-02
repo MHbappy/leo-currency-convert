@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  user-springboot-docker-compose-app-container:
+    image: mhbappy18/currency_convert
+    container_name: currency_convert
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./application:/tmp/springboot-docker-compose-app
+    networks:
+      - backend
+
